@@ -37,7 +37,7 @@ const TodoList: React.FC = () => {
         {todos &&
           todos.map((item, index) => (
             <TodoItem
-              key={index}
+              key={item.id}
               todo={item}
               onEdit={() => startEditing(item.id)}
               onComplete={() => completeTodo(item.id)}
