@@ -1,4 +1,4 @@
-import { TodoContext, TodoProvider } from "./features/todo/TodoContext";
+import { TodoProvider } from "./features/todo/TodoContext";
 import TodoList from "./features/todo/TodoList";
 import "./styles.css";
 
