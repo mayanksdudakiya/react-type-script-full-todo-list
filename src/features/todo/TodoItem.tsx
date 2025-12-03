@@ -11,7 +11,7 @@ const TodoItem: React.FC<TodoItemPropsType> = (props) => {
   const { todo, onComplete, onDelete, onEdit } = props;
 
   return (
-    <li className={todo?.isCompleted && "strike"}>
+    <li className={todo?.isCompleted ? "strike" : undefined}>
       {todo?.name}
       <button onClick={onEdit}>Edit</button>
       <button onClick={onDelete}>Delete</button>
