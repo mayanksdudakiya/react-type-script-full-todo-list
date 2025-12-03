@@ -25,7 +25,7 @@ export const useTodoState = () => {
   };
 
   const deleteTodo = (id: string) => {
-    setTodos((prev) => prev.filter((todo) => todo.id != id));
+    setTodos((prev) => prev.filter((todo) => todo.id !== id));
   };
 
   const updateTodo = (newName: string) => {
