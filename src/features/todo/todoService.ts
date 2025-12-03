@@ -9,7 +9,7 @@ export const useTodoState = () => {
 
   const addTodo = (name: string) => {
     if (!name.trim()) return;
-    
+
     setTodos((prev) => [
       ...prev,
       { id: crypto.randomUUID(), name, isCompleted: false },
@@ -32,6 +32,9 @@ export const useTodoState = () => {
 
   const updateTodo = (newName: string) => {
     if (!isEditMode) return;
+
+    if (!newName.trim()) return;
+
 
     setTodos((prev) =>
       prev.map((todo) =>
