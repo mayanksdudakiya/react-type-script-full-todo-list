@@ -13,7 +13,7 @@ export interface TodoContextType {
   setNewItem: (name: string) => void;
   completeTodo: (id: string) => void;
   deleteTodo: (id: string) => void;
-  updateTodo: (id: string) => void;
+  updateTodo: (newName: string) => void;
   startEditing: (id: string) => void;
   isEditMode: boolean;
 }
