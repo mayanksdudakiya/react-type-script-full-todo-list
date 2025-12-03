@@ -8,6 +8,8 @@ export const useTodoState = () => {
   const [editId, setEditId] = useState<string | null>(null);
 
   const addTodo = (name: string) => {
+    if (!name.trim()) return;
+    
     setTodos((prev) => [
       ...prev,
       { id: crypto.randomUUID(), name, isCompleted: false },
